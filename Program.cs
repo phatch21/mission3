@@ -6,7 +6,7 @@ using mission3;
 // Payton Hatch
 // Group 4-6
 
-
+// program class
 class Program
 {
     static List<FoodItem> foodItems = new List<FoodItem>();
