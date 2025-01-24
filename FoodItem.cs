@@ -4,31 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Payton Hatch
+// Group 4-6
+
 namespace mission3
 {
-    internal class FoodItem
+    public class FoodItem
     {
-        int[] foodItems = [];
+        public string Name { get; set; }
+        public string Category { get; set; }
+        public int Quantity { get; set; }
+        public DateTime ExpirationDate { get; set; }
 
-
-        public void FoodItems(int item)
-        {  
-            
-            if (item == 1)
-            {
-                
-                Console.WriteLine("(Please enter the name of food item you would like to add:)");
-                string itemName = Console.ReadLine();
-
-                Console.WriteLine("(Please enter the category of food item:)");
-                string itemCategory = Console.ReadLine();
-
-                Console.WriteLine("(Please enter the quantity of this food item:)");
-                int numAdd = int.Parse(Console.ReadLine());
-            }
-            
-            
+        public FoodItem(string name, string category, int quantity, DateTime expirationDate)
+        {
+            Name = name;
+            Category = category;
+            Quantity = quantity;
+            ExpirationDate = expirationDate;
         }
 
+        public override string ToString()
+        {
+            return $"Name: {Name}, Category: {Category}, Quantity: {Quantity}, Expiration Date: {ExpirationDate.ToShortDateString()}";
+        }
     }
 }
